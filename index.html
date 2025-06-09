@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priceco-Inspired Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">Priceco</div>
+      <div class="cart">🛒 <span id="cart-count">0</span></div>
+    </div>
+  </header>
+  <div class="main">
+    <nav class="sidebar">
+      <ul>
+        <li onclick="showCategory('home')">Home</li>
+        <li onclick="showCategory('groceries')">Groceries</li>
+        <li onclick="showCategory('clothes')">Clothes</li>
+        <li onclick="showCategory('homeItems')">Home Items</li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div id="home" class="category active">
+        <h2>Welcome to the Store</h2>
+        <p>Select a category from the sidebar to browse products.</p>
+      </div>
+
+      <div id="groceries" class="category">
+        <h2>Groceries</h2>
+        <h3>Breakfast</h3>
+        <div class="product-grid">
+          <div class="product-card" onclick="addToCart('Cereal')">Cereal</div>
+          <div class="product-card" onclick="addToCart('Oatmeal')">Oatmeal</div>
+          <div class="product-card" onclick="addToCart('Eggs')">Eggs</div>
+        </div>
+        <h3>Lunch</h3>
+        <div class="product-grid">
+          <div class="product-card" onclick="addToCart('Sandwich Bread')">Sandwich Bread</div>
+          <div class="product-card" onclick="addToCart('Deli Meat')">Deli Meat</div>
+          <div class="product-card" onclick="addToCart('Salad Mix')">Salad Mix</div>
+        </div>
+        <h3>Snacks</h3>
+        <div class="product-grid">
+          <div class="product-card" onclick="addToCart('Chips')">Chips</div>
+          <div class="product-card" onclick="addToCart('Granola Bars')">Granola Bars</div>
+          <div class="product-card" onclick="addToCart('Fruit Snacks')">Fruit Snacks</div>
+        </div>
+      </div>
+
+      <div id="clothes" class="category">
+        <h2>Clothes</h2>
+        <div class="product-grid">
+          <div class="product-card" onclick="addToCart('T-Shirts')">T-Shirts</div>
+          <div class="product-card" onclick="addToCart('Jeans')">Jeans</div>
+          <div class="product-card" onclick="addToCart('Jackets')">Jackets</div>
+        </div>
+      </div>
+
+      <div id="homeItems" class="category">
+        <h2>Home Items</h2>
+        <div class="product-grid">
+          <div class="product-card" onclick="addToCart('Vacuum Cleaner')">Vacuum Cleaner</div>
+          <div class="product-card" onclick="addToCart('Lamp')">Lamp</div>
+          <div class="product-card" onclick="addToCart('Blender')">Blender</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
