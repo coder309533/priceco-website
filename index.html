@@ -72,3 +72,73 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PriceCo-Inspired Store</title>
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header section containing store logo and shopping cart -->
+    <header>
+        <div class="header-container">
+            <div class="logo">PriceCo</div>
+            <!-- Shopping cart with dynamic item counter -->
+            <div class="cart">🛒 <span id="cart-count">0</span></div>
+        </div>
+    </header>
+
+    <!-- Main content wrapper -->
+    <div class="main">
+        <!-- Navigation sidebar for category selection -->
+        <nav class="sidebar">
+            <ul>
+                <!-- Category links with click handlers -->
+                <li onclick="showCategory('home')">Home</li>
+                <li onclick="showCategory('groceries')">Groceries</li>
+                <li onclick="showCategory('clothes')">Clothes</li>
+                <li onclick="showCategory('homeItems')">Home Items</li>
+            </ul>
+        </nav>
+
+        <!-- Main content area for displaying products -->
+        <div class="content">
+            <!-- Home section - default landing page -->
+            <div id="home" class="category active">
+                <h2>Welcome to the Store</h2>
+                <p>Select a category from the sidebar to browse products.</p>
+            </div>
+
+            <!-- Groceries section with subcategories -->
+            <div id="groceries" class="category">
+                <h2>Groceries</h2>
+                <!-- Breakfast products grid -->
+                <h3>Breakfast</h3>
+                <div class="product-grid">
+                    <!-- Product cards with add to cart functionality -->
+                    <div class="product-card" onclick="addToCart('Cereal')">Cereal</div>
+                    <div class="product-card" onclick="addToCart('Oatmeal')">Oatmeal</div>
+                    <div class="product-card" onclick="addToCart('Eggs')">Eggs</div>
+                </div>
+                <!-- ...existing code for lunch and snacks sections... -->
+            </div>
+
+            <!-- Clothes section -->
+            <div id="clothes" class="category">
+                <!-- ...existing code for clothes products... -->
+            </div>
+
+            <!-- Home Items section -->
+            <div id="homeItems" class="category">
+                <!-- ...existing code for home items products... -->
+            </div>
+        </div>
+    </div>
+    <!-- External JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
